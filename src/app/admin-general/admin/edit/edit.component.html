@@ -1,0 +1,11 @@
+<app-admin></app-admin>
+<div class="page">
+<form (submit)="updateTitlle()">
+  <div class="form-group"> 
+    <input type="text" class="form-control" type="text" name="title" [(ngModel)]="titleHome.title">
+    <button type="submit" class="btn btn-primary">Update </button>
+    <a href="" [routerLink]="['/admin']"  (click)="deletItem()" class="delete">Delete</a>  
+  </div> 
+  </form> 
+</div> 
+  

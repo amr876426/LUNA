@@ -1,0 +1,9 @@
+<section id="admin" class="admin">
+  <app-ledft-menu></app-ledft-menu>
+  <div class="box-basic wino">
+    <div class="container" *ngFor="let item of titlesHome">
+      <h1> {{item.title}}</h1>
+      <a href="" [routerLink]="['/edit-title/'+item.id]" class="butt">Edit</a>
+    </div>
+  </div>
+</section>

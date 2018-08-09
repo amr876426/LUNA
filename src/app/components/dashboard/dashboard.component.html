@@ -1,0 +1,176 @@
+<app-navbar></app-navbar>
+<section id="home" class="header">
+  <div class="overlay">
+    <div class="box-basic">
+      <div class="box wow flipInX" data-wow-duration="1700ms">
+        <div class=" BOX2 wow flipInY">
+          <img src="assets/img/logo.png" class="img-responsive">
+        </div>
+        <div class="input-group wow fadeInUp" id="adv-search">
+          <input type="text" class="form-control" placeholder="put your m3u url" />
+          <div class="input-group-btn">
+            <button type="button">
+              <p> Add Playlist</p>
+            </button>
+          </div>
+        </div>
+        <div class="container" *ngFor="let item of titlesHome">
+          <h1> {{item.title}}</h1>
+        </div>
+        <a href="" [routerLink]="['/send']">
+        <div class="button wow zoomIn " data-wow-delay="1.5s">
+          <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+          <p> ORDER NOW </p>
+        </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="about" class="about">
+  <div class="container-fluid ">
+    <div class="col-md-6 left">
+      <div class="dedo">
+        <div class="group">
+          <div class="item-group  wow fadeInLeft" data-wow-delay=" 0.5s" *ngFor="let item of descriptions">
+            <div class="bg-fa">
+              <i class="fa fa-video-camera" aria-hidden="true"></i>
+            </div>
+            <div class="title-item ">
+              <h2>{{item.header}} </h2>
+              <p>{{item.title}} </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-6 respo wow fadeInRight">
+      <img src="assets/img/pic.png" class="img-responsive">
+    </div>
+  </div>
+</section>
+
+<section id="iptv" class="iptv">
+  <div class="container ">
+    <h1> PRICING PLANS </h1>
+    <p>Enjoy full seasons of exclusive series, blockbuster movies, kids shows and more.</p>
+    <div class="group-iptv">
+      <div class="background-channel-item" *ngFor="let item of packages">
+        <div class="icon-channel">
+          <i class="fa fa-television" aria-hidden="true"></i>
+        </div>
+        <div class="type-chearning">
+          <h3>{{item.time}}</h3>
+        </div>
+        <div class="tilte-channel">
+          <h5>6 days</h5>
+          <h5> Limited Trial Period</h5>
+          <h5> {{item.feature}} </h5>
+          <h5>
+            <span>{{item.price}} EUR </span>
+          </h5>
+        </div>
+        <a href="" [routerLink]="['/send']">
+        <div class="your-project wow bounceIn">
+            <h5>GET STARTED</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="mobile" class="mobile">
+  <div class="container">
+    <div class="col-md-5">
+      <h3> CAPTURAS MOBILE APP IN ANDRIOD AND IPHONE</h3>
+      <p>Now your can watch more than 3000 Channel in your mobile any time</p>
+      <div class="app  wow zoomIn">
+        <img src="assets/img//andriod.png">
+        <img src="assets/img//ios.png">
+      </div>
+    </div>
+    <div class="col-md-7  wow fadeInRight">
+      <IMG src="assets/img//MOBILE.png">
+    </div>
+  </div>
+</section>
+<section class="logo">
+  <div class="overlay2">
+    <div class="container  wow zoomIn">
+      <h3>Enjoy for watching with us </h3>
+      <p> we are best so your can take trial free 7 day Now</p>
+      <a href="" class="edit-profile fonts"> Subscibe Now</a>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="footer" class="footer">
+  <div class="container-fluid ">
+    <div class="col-md-3">
+      <div class="footer-img wow flipInY">
+        <img src="assets/img/logo.png">
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="social-list wow fadeInUp ">
+        <a href="facebook.com">
+          <i class="fa fa-facebook-square" aria-hidden="true"></i>
+        </a>
+        <a href="google.com">
+          <i class="fa fa-google-plus-square" aria-hidden="true"></i>
+        </a>
+        <a href="twitter.com">
+          <i class="fa fa-twitter-square" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="menu  wow zoomIn ">
+        <div id="nav5" class="nav navbar-nav">
+          <a href="#home">
+            <h4>Home</h4>
+          </a>
+          <a href="#iptv">
+            <h4>PACKAGES</h4>
+          </a>
+          <a href="#mobile">
+            <h4>MOBILE APP</h4>
+          </a>
+          <a href="./contact.html">
+            <h4> contact us </h4>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="address wow fadeInRight" *ngFor="let item of addreess">
+        <div class="address-list">
+          <p> {{item.address}}</p>
+        </div>
+
+        <div class="address-list">
+          <p>{{item.email}}</p>
+        </div>
+
+        <div class="address-list">
+          <p>{{item.phone}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="copy-right text-center ">
+  <p>
+    <span> Dseign by :HMASERV</span>All rights reserved</p>
+</section>
+
+

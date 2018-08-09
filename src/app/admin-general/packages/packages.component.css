@@ -1,0 +1,5 @@
+.box-basic {
+    width: calc(100% - 280px);
+    float: right;
+    display: flex;
+}

@@ -1,0 +1,12 @@
+ <section id="admin" class="admin">
+    <app-ledft-menu></app-ledft-menu>
+    <div class="box-basic wino">
+      <div class="container" *ngFor="let item of descriptions">
+          <h2>{{item.header}} </h2>
+          <p>{{item.title}} </p>
+        <a href="" [routerLink]="['/edit-desctiption/'+item.id]" class="butt">Edit</a>
+
+      </div>
+    </div>
+  </section> 
+ 

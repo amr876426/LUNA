@@ -1,0 +1,15 @@
+ 
+ <app-packages></app-packages>
+ <div class="page">
+<form (submit)="updatePackgee(id)">
+  <div class="form-group"> 
+    <input type="text" class="form-control" type="text" name="time" [(ngModel)]="packagee.time">
+    <input type="text" class="form-control" type="text" name="feature" [(ngModel)]="packagee.feature">
+    <input type="text" class="form-control" type="text" name="price" [(ngModel)]="packagee.price">
+    <button type="submit" class="btn btn-primary">Update </button>
+    <a href="" [routerLink]="['/package']"  (click)="deletItem()" class="delete">Delete</a>  
+
+  </div>  
+  </form>   
+</div>
+  

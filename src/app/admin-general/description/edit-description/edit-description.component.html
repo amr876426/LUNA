@@ -1,0 +1,12 @@
+ <app-description></app-description>
+<div class="page">
+    <form (submit)="updateDescription(id)">
+      <div class="form-group"> 
+        <input type="text" class="form-control"  name="header" [(ngModel)]="description.header">
+        <input type="text" class="form-control"  name="title" [(ngModel)]="description.title">
+        <button type="submit" class="btn btn-primary">Update </button>
+        <a href="" [routerLink]="['/desctiption']"  (click)="deletItem()" class="delete">Delete</a>  
+      </div>  
+      </form>   
+    </div>
+  

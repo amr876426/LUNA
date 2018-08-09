@@ -1,0 +1,15 @@
+
+
+/* .admin {
+    background: -webkit-gradient(linear, left top, right top, from(#111), to(#444));
+    background: linear-gradient(to right, #111, #444);
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+} */
+h1{
+    font-size: 18px
+}

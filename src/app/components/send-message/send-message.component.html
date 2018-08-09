@@ -1,0 +1,37 @@
+<app-dashboard></app-dashboard>
+<div class="page">
+    <form novalidate #fo="ngForm" (ngSubmit)="mySubmit(fo)">
+        <div class="form-group">
+            <a href="" [routerLink]="['/']">  <i class="fa fa-times" aria-hidden="true"></i></a>
+            <h3>Choese ypur package</h3>
+          <input type="text" class="form-control" [(ngModel)]="contact.name" name="name" value="name" #contactName="ngModel" placeholder="Name"
+            required>
+          <div *ngIf="contactName.errors?.required && contactName.touched" class="alert alert-danger">Name is required</div>
+        </div>
+        <div class="form-group">
+          <input type="number" class="form-control" [(ngModel)]="contact.mobile" name="mobile" value="mobile" #contactPhone="ngModel" placeholder="mobile"
+            required>
+          <div *ngIf="contactPhone.errors?.required && contactPhone.touched" class="alert alert-danger">Number Phone is required</div>
+        </div> 
+        <input class="form-control" id="contactemail" type="text" #contactemail="ngModel" [(ngModel)]="contact.email" name="email" value="email"
+          placeholder="Email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+
+        <div class="md-errors-spacer" [hidden]="contactemail.valid || contactemail.untouched">
+          <div *ngIf="contactemail.errors && contactemail.errors.pattern" class="alert alert-danger">
+            Email is invalid
+          </div>
+        </div>
+        <textarea  class="form-control"  type="text" #contactemail="ngModel" [(ngModel)]="contact.message" name="message" value="message" placeholder="message"></textarea>
+        <div class="checkgroup">
+          <label class="radio-inline">
+            <input type="radio" name="1 year" [(ngModel)]="contact.package" value="1 year" (click)="click($event)"> 1 year</label>
+            <label class="radio-inline">
+                <input type="radio" name="6 mounth" [(ngModel)]="contact.package"value="6 mounth" (click)="click($event)"> 6 mounth</label>
+            <label class="radio-inline">
+            <input type="radio" name="free" [(ngModel)]="contact.package" value="free" (click)="click($event)"> free</label>
+        </div> 
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Send Now</button>
+          </div>
+      </form> 
+</div> 

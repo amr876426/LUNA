@@ -1,0 +1,13 @@
+<app-address></app-address>
+<div class="page">
+<form (submit)="updateAddress(id)">
+  <div class="form-group"> 
+    <input type="text" class="form-control" type="text" name="address" [(ngModel)]="addrees.address">
+    <input type="text" class="form-control" type="text" name="email" [(ngModel)]="addrees.email">
+    <input type="text" class="form-control" type="text" name="phone" [(ngModel)]="addrees.phone">
+    <button type="submit" class="btn btn-primary">Update </button>
+
+  </div>  
+  </form>   
+</div>
+  
